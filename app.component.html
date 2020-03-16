@@ -1,0 +1,26 @@
+<div class="container">
+  <h3>Angular 2 Operations</h3>
+  <form name="form"  #userForm="ngForm" (ngSubmit)="onSubmit()">
+    <div classs="form-group">
+      <div class="form-group">
+        <label for="id">id</label>
+        <input type="text" class="form-control" name="id" [(ngModel)]="model.id"/>
+      </div>
+      <label> name</label>
+      <input type="text" class="form-control" name="name" [(ngModel)]="model.name"/>
+    </div>
+   
+    <div class="form-group">
+      <label for="salary">Salary</label>
+      <input type="text" class="form-control" name="salary" [(ngModel)]="model.salary"/>
+    </div>
+    <div class="form-group">
+      <label for="department">Department</label>
+      <input type="text" class="form-control" name="department" [(ngModel)]="model.department"/>
+    </div>
+    <div class="form-group">
+     <button class="btn btn-primary">Add Employee</button>
+    </div>
+    {{ userForm.value | json }}
+  </form>
+  </div>
